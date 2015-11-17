@@ -1,0 +1,37 @@
+<style type="text/css">
+    div.shipping-chart p {
+        margin-bottom: 7ex;
+    }
+</style>
+
+<div class="shipping-chart">
+    
+    <h3>
+        Standard shipping
+    </h3>
+    <p>
+        <strong>Parcels</strong> are shipped by DHL with insurance and tracking. <strong>Samples</strong> are shipped by regular mail for free worldwide.
+    </p>
+    
+    <% Spree::Zone.where("id != 2").each do |zone| %>
+        <% next if zone.countries.blank? %>
+
+        <% zone.shipping_method_zones.map(&:shipping_method).flatten.compact.each do |shipping_method| %>
+            <% calc = shipping_method.calculator %>
+            <% if calc.is_a?(Spree::Calculator::Shipping::PriceSack) %>
+                <h4>
+                    <%= curr calc.preferences[:normal_amount], calc.preferences[:currency] %> or
+                    <%= curr_or_text calc.preferences[:discount_amount], "free shipping", calc.preferences[:currency] %>  for orders
+                    reaching <%= curr calc.preferences[:minimal_amount], calc.preferences[:currency] %>
+                </h4>
+            <% elsif calc.is_a?(Spree::Calculator::Shipping::FlatRate) %>
+                    <h3><%= curr_or_text calc.preferences[:amount], "Free shipping", calc.preferences[:currency] %></h3>
+            <% end %>
+        <% end %>
+            <p>
+                <%= zone.countries.sort{|a,b| a.name <=> b.name}.map(&:name).join(", ") %>
+            </p>
+    <% end %>
+    
+    
+</div>
