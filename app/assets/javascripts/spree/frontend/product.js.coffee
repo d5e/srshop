@@ -53,3 +53,4 @@ Spree.ready ($) ->
   radios.click (event) ->
     Spree.showVariantImage @value
     Spree.updateVariantPrice ($ this)
+

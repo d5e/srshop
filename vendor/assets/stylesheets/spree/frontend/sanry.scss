@@ -440,9 +440,21 @@ a.list-group-item:hover, a.list-group-item:focus, button.list-group-item:hover, 
 
 // SPREE PRODUCT ZOOM BUGFIX
 
-#product-details #thumbnails ul#product-thumbnails li.vtmb {
-  display: inline-block !important;
+#product-details #thumbnails ul#product-thumbnails {
+
+  font-size: 0;
+  margin-left: 0;
+
+  li.vtmb {
+    display: inline-block !important;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 6px;
+  }
+  
 }
+
+
 
 // SPREE THUMBNAIL HOVER JUMPING BUGIFX
 #product-details #product-images #main-image {
