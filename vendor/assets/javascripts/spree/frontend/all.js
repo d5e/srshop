@@ -10,3 +10,4 @@
 
 //= require_tree .
 //= require spree/product_zoom
+//= require spree/frontend/spree_paypal_express
