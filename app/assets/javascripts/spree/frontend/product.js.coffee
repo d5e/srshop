@@ -23,6 +23,7 @@ Spree.ready ($) ->
     src = thumbLink.attr 'href'
     if src
       ($ '#main-image img[itemprop]').attr 'src', src
+      ($ '#main-image').data 'selectedThumb', src
 
 #     ($ 'li.vtmb').hide()
 #     alert(variantId)
