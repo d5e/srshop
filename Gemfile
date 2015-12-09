@@ -21,8 +21,8 @@ gem 'spree_gateway', github: 'spree/spree_gateway'#, branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise'#, branch: '3-0-stable'
 
 gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git"
-
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'#, branch: '3-1-beta'
+gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
 
 
 
