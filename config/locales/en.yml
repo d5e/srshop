@@ -1,23 +1,31 @@
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  spree:
+    home: "Home"
+    order_mailer:
+      cancel_email:
+        dear_customer: Dear Customer,
+        instructions: Your order has been CANCELED.  Please retain this cancellation information for your records.
+        order_summary_canceled: Order Summary [CANCELED]
+        subject: Cancellation of Order
+        subtotal: ! 'Subtotal:'
+        total: ! 'Order Total:'
+      confirm_email:
+        dear_customer: Dear Customer,
+        instructions: Please review and retain the following order information for your records.
+        order_summary: Order Summary
+        subject: Order Confirmation
+        subtotal: ! 'Subtotal:'
+        thanks: Thank you for your order.
+    shipment_mailer:
+      shipped_email:
+        dear_customer: Dear Customer,
+        instructions: Your order has been shipped
+        shipment_summary: Shipment Summary
+        subject: Shipment Notification
+        thanks: Thank you for your order.
+    thank_you_for_your_order: Thank you for your order.  Please print out a copy of this confirmation page for your records.
+        

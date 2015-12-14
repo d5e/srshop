@@ -24,6 +24,9 @@ gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'#, branch: '3-1-beta'
 gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
 
+gem 'nokogiri'
+gem 'css_parser'
+gem 'premailer-rails'
 
 
 #thub: 'spree/spree' Use jquery as the JavaScript library
