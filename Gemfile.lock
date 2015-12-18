@@ -7,13 +7,6 @@ GIT
       spree_core (~> 3.1.0.beta)
 
 GIT
-  remote: git://github.com/spree-contrib/spree_mail_settings.git
-  revision: 13d712181a1642b60f35b8ec50cf7deb52f0b8d4
-  specs:
-    spree_mail_settings (2.2.0)
-      spree_backend (~> 3.1.0.beta)
-
-GIT
   remote: git://github.com/spree/spree.git
   revision: 8e74d76c41ce3b9dbb5e8f66f015793176a7451d
   specs:
@@ -220,6 +213,10 @@ GEM
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    launchy (2.4.3)
+      addressable (~> 2.3)
+    letter_opener (1.4.1)
+      launchy (~> 2.2)
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -363,6 +360,7 @@ DEPENDENCIES
   css_parser
   jbuilder (~> 2.0)
   jquery-rails
+  letter_opener
   mysql2
   nokogiri
   premailer-rails
@@ -372,7 +370,6 @@ DEPENDENCIES
   spree!
   spree_auth_devise!
   spree_gateway!
-  spree_mail_settings!
   spree_paypal_express!
   spree_product_zoom!
   spring

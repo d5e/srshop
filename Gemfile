@@ -22,7 +22,6 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise'#, branch: '3-0-stable
 
 gem "spree_product_zoom", :git => "git://github.com/spree/spree_product_zoom.git"
 gem 'spree_paypal_express', github: 'spree-contrib/better_spree_paypal_express'#, branch: '3-1-beta'
-gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
 
 gem 'nokogiri'
 gem 'css_parser'
@@ -47,7 +46,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem 'spree_mail_settings', github: 'spree-contrib/spree_mail_settings'
+end
+
 group :development, :test do
+
+  gem 'letter_opener'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -57,5 +63,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-

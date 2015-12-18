@@ -1,0 +1,44 @@
+<table class="row header">
+    <tr>
+        <td height="24">&nbsp;</td>
+    </tr>
+  <tr>
+    <td class="center" align="center">
+      <center>
+
+        <table class="container">
+          <tr>
+            <td class="wrapper last">
+
+              <table class="twelve columns" style="border-bottom: 1px solid black;">
+                <tr>
+                  <td class="six sub-columns" style="padding:0;">
+                      <span class="template-label" style="font: 500 11px sans-serif;"><%= l Date.today %></span>
+                  </td>
+                  <td class="six sub-columns last" style="text-align:right; vertical-align:middle; padding:0;">
+                    <span class="template-label" style="font: 500 11px sans-serif;"><%= Spree::Store.current.name %></span>
+                  </td>
+                  <td class="expander" style="padding:0;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        
+        <table class="container">
+            <tr>
+                <td height="60">&nbsp;</td>
+            </tr>
+            <tr>
+                <td style="width: 100%; text-align: center;">
+                    <%= image_tag "https://shop.sanry.fr/imagery/logo_centered_transparent.png", style: "float: none; display: inline-block;" %>
+                </td>
+            </tr>
+            <tr>
+                <td height="20">&nbsp;</td>
+            </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
