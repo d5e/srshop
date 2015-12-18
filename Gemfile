@@ -52,7 +52,7 @@ end
 
 group :development, :test do
 
-  gem 'letter_opener'
+#  gem 'letter_opener'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
